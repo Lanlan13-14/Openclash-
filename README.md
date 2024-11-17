@@ -10,4 +10,4 @@ ps：考虑到部分机场节点有高低倍率之分，所以所有节点组所
 感谢
 以下排名不分先后
 
-https://github.com/dogfight360/UsbEAm
+UsbEAm
