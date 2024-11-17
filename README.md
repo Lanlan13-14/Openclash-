@@ -6,3 +6,13 @@ ps：考虑到部分机场节点有高低倍率之分，所以所有节点组所
 也感谢每一位为openclash项目做出贡献的开发者，是他们为openclash项目添砖加瓦
 请不要成为一只“吸取帮助的吸血鬼（help vampire）‘。
 另外不可转载至国内平台
+-------------------------------------------------
+感谢
+以下排名不分先后
+
+vernesong/OpenClash
+MetaCubeX/mihomo
+ACL4SSR/ACL4SSR
+blackmatrix7/ios_rule_script
+TraderWukong/demo
+dogfight360/UsbEAm
