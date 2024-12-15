@@ -148,18 +148,23 @@ proxies:
 # 策略组
 proxy-groups:
   - {name: 🚀 节点选择, type: select, proxies: [♻️ 香港自动, ♻️ 新加坡自动, ♻️ 日本自动, ♻️ 台湾自动, ♻️ 美国自动, ♻️ 自动选择, 🇭🇰 香港节点, 🇸🇬 新加坡节点, 🇯🇵 日本节点, 🇹🇼 台湾节点, 🇺🇲 美国节点, 🌐 全部节点, ⭕ 自建节点, 🔗 链式代理, 🟢 直连]}
-  - {name: 📹 YouTube, <<: *pr}
-  - {name: 🍀 Google, <<: *pr}
-  - {name: 🤖 ChatGPT, <<: *pr}
-  - {name: 👨🏿‍💻 GitHub, <<: *pr}
-  - {name: 🐬 OneDrive, <<: *pr}
-  - {name: 🪟 Microsoft, <<: *pr}
-  - {name: 🎵 TikTok, <<: *pr}
-  - {name: 📲 Telegram, <<: *pr}
-  - {name: 🎥 NETFLIX, <<: *pr}
-  - {name: ✈️ Speedtest, <<: *pr}
-  - {name: 💶 PayPal, <<: *pr}
-  - {name: 🍎 Apple, type: select, proxies: [🟢 直连, 🚀 节点选择]}
+  - {name: YouTube, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/YouTube.png"}
+  - {name: Google, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Google_Search.png"}
+  - {name: AI, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/AI.png"}
+  - {name: GitHub, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/GitHub.png"}
+  - {name: OneDrive, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/OneDrive.png"}
+  - {name: Microsoft, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/Microsoft.png"}
+  - {name: TikTok, <<: *pr, icon: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/icon/dark/TikTok.png"}
+  - {name: Telegram, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Telegram.png"}
+  - {name: NETFLIX, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Netflix.png"}
+  - {name: 哔哩哔哩, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/bilibili.png"}
+  - {name: 哔哩东南亚, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/bilibili.png"}
+  - {name: 巴哈姆特, type: select, proxies: [🇹🇼 台湾节点, ♻️ 台湾自动], icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Bahamut.png"}
+  - {name: Spotify, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Spotify.png"}
+  - {name: Steam, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/Steam.png"}
+  - {name: Speedtest, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/SpeedTest.png"}
+  - {name: PayPal, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/PayPal.png"}
+  - {name: Apple, type: select, proxies: [🟢 直连, 🚀 节点选择], icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Apple.png"}
   - {name: 🔗 链式代理, type: relay, proxies: [🇺🇲 美国节点, ⭕ 自建节点]}
   - {name: 🎯 全球直连, type: select, proxies: [🟢 直连, 🚀 节点选择]}
   - {name: 🛑 隐私拦截, type: select, proxies: [🟢 直连, REJECT]}
@@ -187,32 +192,43 @@ rules:
   - RULE-SET,blockAd6,🛑 隐私拦截
   - RULE-SET,blockAd7,🛑 隐私拦截
   - RULE-SET,Installationcheck,🛑 隐私拦截
+  - RULE-SET,biliintl_domain,哔哩东南亚
+  - RULE-SET,bilibili_domain,哔哩哔哩
+  - RULE-SET,bahamut_domain,巴哈姆特
   - RULE-SET,private_domain,🟢 直连
   - RULE-SET,direct1,🟢 直连
   - RULE-SET,xiaomi,🟢 直连
   - RULE-SET,direct2,🟢 直连
   - RULE-SET,direct3,🟢 直连
   - RULE-SET,direct4,🟢 直连
+  - RULE-SET,steamcn,🟢 直连
+  - RULE-SET,steamcdn,🟢 直连
+  - RULE-SET,btdownload,🟢 直连
   - RULE-SET,Chinacompanyip,🟢 直连
-  - RULE-SET,apple_domain,🍎 Apple
+  - RULE-SET,apple_domain,Apple
   - RULE-SET,free,🔗 链式代理
   - RULE-SET,proxylite,🚀 节点选择
-  - RULE-SET,ai,🤖 ChatGPT
-  - RULE-SET,github_domain,👨🏿‍💻 GitHub
-  - RULE-SET,youtube_domain,📹 YouTube
-  - RULE-SET,google_domain,🍀 Google
-  - RULE-SET,onedrive_domain,🐬 OneDrive
-  - RULE-SET,microsoft_domain,🪟 Microsoft
-  - RULE-SET,tiktok_domain,🎵 TikTok
-  - RULE-SET,speedtest_domain,✈️ Speedtest
-  - RULE-SET,telegram_domain,📲 Telegram
-  - RULE-SET,netflix_domain,🎥 NETFLIX
-  - RULE-SET,paypal_domain,💶 PayPal
+  - RULE-SET,ai,AI
+  - RULE-SET,ai1,AI
+  - RULE-SET,ai2,AI
+  - RULE-SET,ai3,AI
+  - RULE-SET,github_domain,GitHub
+  - RULE-SET,youtube_domain,YouTube
+  - RULE-SET,google_domain,Google
+  - RULE-SET,onedrive_domain,OneDrive
+  - RULE-SET,microsoft_domain,Microsoft
+  - RULE-SET,tiktok_domain,TikTok
+  - RULE-SET,speedtest_domain,Speedtest
+  - RULE-SET,telegram_domain,Telegram
+  - RULE-SET,netflix_domain,NETFLIX
+  - RULE-SET,spotify_domain,Spotify
+  - RULE-SET,steam,Steam
+  - RULE-SET,paypal_domain,PayPal
   - RULE-SET,geolocation-!cn,🚀 节点选择
   - RULE-SET,cn_domain,🎯 全球直连
-  - RULE-SET,google_ip,🍀 Google,no-resolve
-  - RULE-SET,netflix_ip,🎥 NETFLIX,no-resolve
-  - RULE-SET,telegram_ip,📲 Telegram,no-resolve
+  - RULE-SET,google_ip,Google,no-resolve
+  - RULE-SET,netflix_ip,NETFLIX,no-resolve
+  - RULE-SET,telegram_ip,Telegram,no-resolve
   - RULE-SET,cn_ip,🎯 全球直连,no-resolve
   - MATCH,🐟 漏网之鱼
 rule-anchor:
@@ -236,7 +252,18 @@ rule-providers:
   direct3: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Direct/Direct.list" }
   direct4: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.list" }
   xiaomi: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/XiaoMi/XiaoMi.list" }
-
+  biliintl_domain: { <<: *class, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/biliintl.list" }
+  bilibili_domain: { <<: *class, url:"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bilibili.list" }
+  bahamut_domain: { <<: *class, url:"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/bahamut.list" }
+  spotify_domain: { <<: *class, url:"https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/spotify.list" }
+  steamcn: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/SteamCN/SteamCN.list" }
+  steamcdn: { <<: *class, url: "https://raw.githubusercontent.com/Aethersailor/Custom_OpenClash_Rules/main/rule/Steam_CDN.list" }
+  btdownload: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.list" }
+  download: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Download/Download.list" }
+  steam: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.list" }
+  ai1: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.list" }
+  ai2: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.list" }
+  ai3: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Claude/Claude.list" }
   proxylite: { <<: *qcy, url: "https://raw.githubusercontent.com/qcyhub/rule/master/ProxyLite.list" }
   ai: { <<: *qcy, url: "https://raw.githubusercontent.com/qcyhub/rule/master/AI.list" }
   free: { <<: *qcy, url: "https://raw.githubusercontent.com/qcyhub/rule/master/Free.list" }
