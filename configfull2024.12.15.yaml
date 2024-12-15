@@ -5,7 +5,7 @@ pr: &pr {type: select, proxies: [🚀 节点选择, ♻️ 香港自动, ♻️ 
 proxy-providers:
   Airport_01:
     type: http
-    interval: 1800
+    interval: 86400
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
@@ -14,7 +14,7 @@ proxy-providers:
     url: "订阅链接"
   Airport_02:
     type: http
-    interval: 1800
+    interval: 86400
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
