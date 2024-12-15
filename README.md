@@ -1,5 +1,6 @@
 # Openclash-
-本项目的订阅转换模板是参考 ACL4SSR，Aethersailor，qichiyu等规则修改而来，基于作者个人理解做出的修改
+本项目的订阅转换模板/yaml文件是参考 ACL4SSR，Aethersailor，qichiyu等规则修改而来，基于作者个人理解做出的修改
+2024.12.15 standard版本ini文件编译出错，请暂时使用其他版本
 -------------------------------------------------
 感谢
 以下排名不分先后
@@ -18,6 +19,7 @@
 
 •[Aethersailor/Custom_OpenClash_Rules](https://github.com/Aethersailor/Custom_OpenClash_Rules)
 
+•[qichiyuhub/rule](https://github.com/qichiyuhub/rule)
 -------------------------------------------------
 tips:生活是条双行道，
 这是一个简单而深刻，且不可否认的事实。如遇问题或建议欢迎指出，同时确保你的帖子包含对他人来说有用的细节和信息。通过Github社区分享你的发现。同样地分享你遇到的问题
