@@ -186,6 +186,7 @@ rules:
   - RULE-SET,blockAd5,🛑 隐私拦截
   - RULE-SET,blockAd6,🛑 隐私拦截
   - RULE-SET,blockAd7,🛑 隐私拦截
+  - RULE-SET,Installationcheck,🛑 隐私拦截
   - RULE-SET,private_domain,🟢 直连
   - RULE-SET,direct1,🟢 直连
   - RULE-SET,xiaomi,🟢 直连
@@ -220,6 +221,7 @@ rule-anchor:
   qcy: &qcy {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
+  Installationcheck: { <<: *class, url: "https://raw.githubusercontent.com/Lanlan13-14/Openclash-/refs/heads/main/Installationcheck.list" }
   blockAd0: { <<: *class, url: "https://ghp.ci/https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/refs/heads/main/Filters/AWAvenue-Ads-Rule-Clash.yaml" }
   blockAd1: { <<: *class, url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list" }
   blockAd2: { <<: *class, url: "https://ghproxy.com/https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list" }
