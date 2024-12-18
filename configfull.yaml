@@ -43,7 +43,6 @@ tcp-concurrent: true
 # interface-name: eth0  （路由器下根据情况指定出站接口）
 authentication:
 #  - name:passwd
-#上方为http代理密码默认不启用
   
 geodata-mode: false
 # GEO 文件加载模式（standard：标准加载器/memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)）
@@ -162,6 +161,8 @@ proxy-groups:
   - {name: 哔哩东南亚, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/bilibili.png"}
   - {name: 巴哈姆特, type: select, proxies: [🇹🇼 台湾节点, ♻️ 台湾自动], icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Bahamut.png"}
   - {name: Spotify, <<: *pr, icon: "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/mini/Spotify.png"}
+  - {name: 🌏 国内媒体, <<: *pr}
+  - {name: 🌎 国外媒体, <<: *pr}
   - {name: Steam, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/Steam.png"}
   - {name: Speedtest, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/SpeedTest.png"}
   - {name: PayPal, <<: *pr, icon: "https://raw.githubusercontent.com/Vbaethon/HOMOMIX/refs/heads/main/Icon/Color/PayPal.png"}
@@ -207,6 +208,7 @@ rules:
   - RULE-SET,steamcdn,🟢 直连
   - RULE-SET,btdownload,🟢 直连
   - RULE-SET,Chinacompanyip,🟢 直连
+  - RULE-SET,China'smedia,🌏 国内媒体
   - RULE-SET,apple_domain,Apple
   - RULE-SET,free,🔗 链式代理
   - RULE-SET,proxylite,🚀 节点选择
@@ -217,6 +219,7 @@ rules:
   - RULE-SET,github_domain,GitHub
   - RULE-SET,youtube_domain,YouTube
   - RULE-SET,google_domain,Google
+  - RULE-SET,googleplay,Google
   - RULE-SET,onedrive_domain,OneDrive
   - RULE-SET,microsoft_domain,Microsoft
   - RULE-SET,tiktok_domain,TikTok
@@ -226,6 +229,7 @@ rules:
   - RULE-SET,spotify_domain,Spotify
   - RULE-SET,steam,Steam
   - RULE-SET,paypal_domain,PayPal
+  - RULE-SET,Globalmedia,🌎 国外媒体
   - RULE-SET,geolocation-!cn,🚀 节点选择
   - RULE-SET,cn_domain,🎯 全球直连
   - RULE-SET,google_ip,Google,no-resolve
@@ -284,6 +288,9 @@ rule-providers:
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs" }
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs" }
   blockAd8: { <<: *class, url: "https://raw.githubusercontent.com/8680/GOODBYEADS/refs/heads/master/data/rules/qx.list" }
+  googleplay: { <<: *class, url: "https://raw.githubusercontent.com/Lanlan13-14/qichiyu/refs/heads/master/Googleproxy.list" }
+  China'smedia: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.list" }
+  Globalmedia: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.list" }
 
   Chinacompanyip: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list" }
   cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs" }
