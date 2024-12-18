@@ -11,16 +11,16 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 🟢 直连
-    url: "订阅链接"
+    url: "https://911tg3rs.com/api/v1/client/subscribe?token=535d96b0f33fb25eaa0735d99d4d34c9"
   Airport_02:
     type: http
-    interval: 86400
+    interval: 3600
     health-check:
       enable: true
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 🟢 直连
-    url: "订阅链接"
+    url: "https://try.nevergivein.us.kg/745408A.?clash"
     override:
       skip-cert-verify: true
       udp: true
@@ -42,7 +42,8 @@ unified-delay: true
 tcp-concurrent: true
 # interface-name: eth0  （路由器下根据情况指定出站接口）
 authentication:
-  - name:passwd
+#  - name:passwd
+#上方为http代理密码默认不启用
   
 geodata-mode: false
 # GEO 文件加载模式（standard：标准加载器/memconservative：专为内存受限 (小内存) 设备优化的加载器 (默认值)）
@@ -191,6 +192,7 @@ rules:
   - RULE-SET,blockAd5,🛑 隐私拦截
   - RULE-SET,blockAd6,🛑 隐私拦截
   - RULE-SET,blockAd7,🛑 隐私拦截
+  - RULE-SET,blockAd8,🛑 隐私拦截
   - RULE-SET,Installationcheck,🛑 隐私拦截
   - RULE-SET,biliintl_domain,哔哩东南亚
   - RULE-SET,bilibili_domain,哔哩哔哩
@@ -281,7 +283,8 @@ rule-providers:
   gfw_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/gfw.mrs" }
   geolocation-!cn: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/geolocation-!cn.mrs" }
   cn_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/cn.mrs" }
-  
+  blockAd8: { <<: *class, url: "https://raw.githubusercontent.com/8680/GOODBYEADS/refs/heads/master/data/rules/qx.list" }
+
   Chinacompanyip: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list" }
   cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs" }
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs" }
