@@ -11,7 +11,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 🟢 直连
-    url: ""
+    url: "订阅链接"
   Airport_02:
     type: http
     interval: 3600
@@ -20,7 +20,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 🟢 直连
-    url: ""
+    url: "订阅链接"
     override:
       skip-cert-verify: true
       udp: true
