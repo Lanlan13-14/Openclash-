@@ -11,7 +11,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 🟢 直连
-    url: "https://911tg3rs.com/api/v1/client/subscribe?token=535d96b0f33fb25eaa0735d99d4d34c9"
+    url: ""
   Airport_02:
     type: http
     interval: 3600
@@ -20,7 +20,7 @@ proxy-providers:
       url: https://www.gstatic.com/generate_204
       interval: 300
     proxy: 🟢 直连
-    url: "https://try.nevergivein.us.kg/745408A.?clash"
+    url: ""
     override:
       skip-cert-verify: true
       udp: true
