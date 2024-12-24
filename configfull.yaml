@@ -108,7 +108,7 @@ tun:
 dns:
   enable: true
   listen: 0.0.0.0:1053
-  ipv6: false
+  ipv6: true
   respect-rules: true
   # 模式切换 redir-host / fake-ip
   enhanced-mode: fake-ip
@@ -135,9 +135,8 @@ dns:
     - https://120.53.53.53/dns-query 
     - https://223.5.5.5/dns-query
     "rule-set:geolocation-!cn":
-      - "https://dns.cloudflare.com/dns-query"
       - "https://dns.google/dns-query"
- 
+      - "https://security.cloudflare-dns.com/dns-query"
  
    
 proxies:
@@ -212,6 +211,8 @@ rules:
   - RULE-SET,google_ip2,Google,no-resolve
   - RULE-SET,fcm,Google
   - RULE-SET,proxylite,🚀 节点选择
+  - RULE-SET,telegram_domain,Telegram
+  - RULE-SET,telegram_ip,Telegram,no-resolve
   - RULE-SET,private_domain,🟢 直连
   - RULE-SET,direct1,🟢 直连
   - RULE-SET,xiaomi,🟢 直连
@@ -223,6 +224,7 @@ rules:
   - RULE-SET,btdownload,🟢 直连
   - RULE-SET,Chinacompanyip,🟢 直连
   - RULE-SET,wangyiyu,🟢 直连
+  - RULE-SET,direct5,🟢 直连
   - RULE-SET,China'smedia,🌏 国内媒体
   - RULE-SET,appleTV,AppleTV
   - RULE-SET,apple_domain,Apple
@@ -236,7 +238,6 @@ rules:
   - RULE-SET,onedrive_domain,OneDrive
   - RULE-SET,microsoft_domain,Microsoft
   - RULE-SET,tiktok_domain,TikTok
-  - RULE-SET,telegram_domain,Telegram
   - RULE-SET,netflix_domain,NETFLIX
   - RULE-SET,disney,DisneyPlus
   - RULE-SET,hbo,HBO
@@ -259,7 +260,6 @@ rules:
   - RULE-SET,geolocation-!cn,🚀 节点选择
   - RULE-SET,cn_domain,🎯 全球直连
   - RULE-SET,netflix_ip,NETFLIX,no-resolve
-  - RULE-SET,telegram_ip,Telegram,no-resolve
   - RULE-SET,cn_ip,🎯 全球直连,no-resolve
   - MATCH,🐟 漏网之鱼
 rule-anchor:
@@ -335,6 +335,7 @@ rule-providers:
   UBI: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UBI/UBI.list" }
   Snoy: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Sony/Sony.list" }
   Nintendo: { <<: *class, url: "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.list" }
+  direct5: { <<: *class, url: "https://raw.githubusercontent.com/Lanlan13-14/Openclash-/refs/heads/main/direct.list" }
 
   Chinacompanyip: { <<: *class, url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/refs/heads/master/Clash/ChinaCompanyIp.list" }
   cn_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/cn.mrs" }
